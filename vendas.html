@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Papeliar Papelaria</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="vendas">
+  <main>
+    <section class="vendas-topo">
+      <div class="container">
+        <div class="vendas-barra">
+          <div class="filtro">
+            <button class="botao-icone" id="botao-filtro" aria-label="Filtrar por preço" aria-haspopup="true" aria-expanded="false" aria-controls="filtro-opcoes" title="Filtrar por preço">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z"/></svg>
+            </button>
+            <ul class="filtro-opcoes" id="filtro-opcoes" role="menu" hidden>
+              <li><button role="menuitemradio" aria-checked="false" data-ordem="crescente">Menor para maior preço</button></li>
+              <li><button role="menuitemradio" aria-checked="false" data-ordem="decrescente">Maior para menor preço</button></li>
+              <li><button role="menuitemradio" aria-checked="true" data-ordem="padrao">Ordem padrão</button></li>
+            </ul>
+          </div>
+
+          <div class="vendas-titulo">
+            <span class="rotulo">Loja Papeliar</span>
+            <h1>Nossos produtos</h1>
+            <p>Materiais escolares, escritório, organização, informática e artes.</p>
+          </div>
+
+          <a href="carrinho.html" class="botao-icone carrinho" aria-label="Ir para o carrinho" title="Carrinho">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6.2"/></svg>
+            <span class="contador" data-contador-carrinho hidden>0</span>
+          </a>
+        </div>
+        <p class="filtro-estado" id="filtro-estado" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="vendas-grade" id="vendas-grade"></div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/vendas.js"></script>
+</body>
+</html>

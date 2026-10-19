@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento | Papeliar Papelaria</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="pagamento">
+  <main class="pagamento-fundo">
+    <div class="container">
+      <header class="pagina-titulo">
+        <span class="rotulo">Finalizar compra</span>
+        <h1 class="sublinhado-amarelo">Pagamento</h1>
+      </header>
+
+      <div class="pagamento-layout" id="pagamento-layout">
+        <form class="pagamento-form" id="form-pagamento" novalidate>
+          <fieldset>
+            <h2><span class="numero">1</span>Dados do titular</h2>
+            <div class="campos">
+              <div class="campo inteiro">
+                <label for="nome-completo">Nome completo</label>
+                <input type="text" id="nome-completo" name="nome-completo" autocomplete="name" placeholder="Seu nome completo">
+              </div>
+              <div class="campo inteiro">
+                <label for="email">E-mail vinculado ao cartão</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="seuemail@exemplo.com">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <h2><span class="numero">2</span>Dados do cartão</h2>
+            <div class="cartao-visual" aria-hidden="true">
+              <div class="chip"></div>
+              <div class="numero-cartao" id="visual-numero">•••• •••• •••• ••••</div>
+              <div class="linha">
+                <span id="visual-nome">Nome no cartão</span>
+                <span id="visual-validade">MM/AA</span>
+              </div>
+            </div>
+            <div class="campos">
+              <div class="campo inteiro">
+                <label for="numero-cartao">Número do cartão</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="0000 0000 0000 0000">
+              </div>
+              <div class="campo inteiro">
+                <label for="nome-cartao">Nome impresso no cartão</label>
+                <input type="text" id="nome-cartao" name="nome-cartao" autocomplete="cc-name" placeholder="Como aparece no cartão">
+              </div>
+              <div class="campo">
+                <label for="validade">Validade</label>
+                <input type="text" id="validade" name="validade" inputmode="numeric" autocomplete="cc-exp" maxlength="5" placeholder="MM/AA">
+              </div>
+              <div class="campo">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="000">
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="separador">
+          <button type="button" class="botao botao-primario botao-grande botao-bloco">Confirmar compra</button>
+        </form>
+
+        <aside class="resumo-claro" id="resumo-pagamento"></aside>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pagamento.js"></script>
+</body>
+</html>
